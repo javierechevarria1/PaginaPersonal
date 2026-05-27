@@ -56,7 +56,7 @@ const projects = [
       { icon: Trophy,        color: 'text-yellow-400', label: '1er puesto Hack The Age' },
     ],
     stack: ['React', 'Node.js', 'TypeScript', 'Tailwind CSS', 'IoT'],
-    link: null,
+    link: 'https://javierechevarria1.github.io/PaginaNexa/',
   },
 ];
 
@@ -94,12 +94,23 @@ export const Projects = () => {
                   <h3 className="text-xl md:text-2xl font-black text-white tracking-tight">{title}</h3>
                   <p className="text-slate-400 text-sm mt-0.5">{subtitle}</p>
                 </div>
-                <button
-                  disabled={!link}
-                  className="shrink-0 flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-700 text-slate-500 text-xs font-mono opacity-50 cursor-not-allowed"
-                >
-                  <ExternalLink size={13} /> Ver proyecto
-                </button>
+                {link ? (
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 flex items-center gap-2 px-3 py-2 rounded-lg border border-cyan-500/40 text-cyan-400 text-xs font-mono hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-200"
+                  >
+                    <ExternalLink size={13} /> Ver proyecto
+                  </a>
+                ) : (
+                  <button
+                    disabled
+                    className="shrink-0 flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-700 text-slate-500 text-xs font-mono opacity-50 cursor-not-allowed"
+                  >
+                    <ExternalLink size={13} /> Ver proyecto
+                  </button>
+                )}
               </div>
 
               <p className="text-slate-300 text-sm leading-relaxed mb-4">{description}</p>
