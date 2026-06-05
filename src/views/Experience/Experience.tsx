@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Award, ChevronRight } from 'lucide-react';
+import { Briefcase, Award, ChevronRight, Globe } from 'lucide-react';
 import { NetbeesModal } from '../../components/UI/NetbeesModal';
 
 const fadeInUp = {
@@ -83,6 +83,10 @@ export const Experience = () => {
                 <div className="flex items-center gap-3 text-slate-300 text-sm bg-[#05080f] p-3 rounded-lg border border-slate-800/80">
                   <Award size={18} className="text-yellow-400" />
                   <span>Ganador del Hackathon "Hack The Age" (Netbees)</span>
+                </div>
+                <div className="flex items-center gap-3 text-slate-300 text-sm bg-[#05080f] p-3 rounded-lg border border-orange-500/20">
+                  <Globe size={18} className="text-orange-400" />
+                  <span>Asistente al <strong className="text-orange-400 font-medium">AWS Summit Madrid 2026</strong></span>
                 </div>
               </div>
               <button

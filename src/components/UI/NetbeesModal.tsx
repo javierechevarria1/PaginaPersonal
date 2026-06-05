@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Award, Code, Database } from 'lucide-react';
-import { useEffect } from 'react';
+import { X, Award, Code, Database, Globe, ZoomIn } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 interface NetbeesModalProps {
   open: boolean;
@@ -16,21 +16,90 @@ const bullets = [
   {
     icon: Code,
     color: 'text-cyan-400',
-    text: 'Formé parte del desarrollo full stack de una plataforma web utilizando React, Next.js, Node.js, TypeScript, Tailwind CSS y PostgreSQL, participando en la implementación de funcionalidades frontend y backend, APIs REST, sistemas de autenticación, chat en tiempo real e integración de Stripe para pagos y suscripciones.',
+    text: 'Formé parte del desarrollo full stack de un modelo de negocio llamado VIVE+, una plataforma diseñada en React, Next.js, Node.js, TypeScript, Tailwind CSS y PostgreSQL, participando en la implementación de funcionalidades frontend y backend, APIs REST, sistemas de autenticación, chat en tiempo real e integración de Stripe para pagos y suscripciones.',
   },
   {
     icon: Database,
     color: 'text-blue-400',
     text: 'Colaboré en la gestión, optimización y reestructuración de bases de datos mediante PostgreSQL, DBeaver y pgAdmin, así como en el control de versiones y trabajo colaborativo utilizando Git y GitHub mediante ramas propias, commits, push y merges coordinados con el equipo de desarrollo.',
   },
+  {
+    icon: Globe,
+    color: 'text-orange-400',
+    text: 'Asistí al AWS Summit Madrid 2026, uno de los eventos tecnológicos más importantes del año. Recorrí la zona de exposición de empresas como AWS, Accenture, NTT DATA, Anthropic, Cloudflare, Palo Alto Networks o Snowflake, y pude conocer de cerca cómo están aplicando cloud computing, IA generativa, ciberseguridad y automatización en casos reales. También tuve la oportunidad de conversar con profesionales del sector, intercambiar experiencias y ampliar mi visión sobre las tendencias que están transformando el ecosistema IT.',
+  },
 ];
 
 const base = import.meta.env.BASE_URL;
-const photos = [
+const photosNetbees = [
   { src: `${base}images/nexa-pulsera.jpeg`, alt: 'Proyecto NEXA — pulsera inteligente' },
   { src: `${base}images/hackathon-premio.jpeg`, alt: 'Primer puesto Hackathon Hack The Age' },
   { src: `${base}images/hackathon-presentacion.jpeg`, alt: 'Presentación NEXA en Netbees' },
+  { src: `${base}images/fotoequipo.jpg`, alt: 'Equipo de prácticas en Netbees' },
 ];
+const photosAWS = [
+  { src: `${base}images/foto1AWS.jpg`, alt: 'AWS Summit Madrid 2026' },
+  { src: `${base}images/foto2AWS.jpg`, alt: 'AWS Summit Madrid 2026 — stands y exposición' },
+  { src: `${base}images/AcreditacionAWS.jpg`, alt: 'Acreditación AWS Summit Madrid 2026' },
+];
+
+function PhotoGrid({ photos, cols }: { photos: { src: string; alt: string }[]; cols: string }) {
+  const [lightbox, setLightbox] = useState<string | null>(null);
+
+  return (
+    <>
+      <div className={`grid ${cols} gap-3`}>
+        {photos.map((photo, i) => (
+          <button
+            key={i}
+            onClick={() => setLightbox(photo.src)}
+            className="group relative rounded-xl overflow-hidden border border-slate-800/60 aspect-[4/3] bg-slate-900 cursor-zoom-in"
+          >
+            <img
+              src={photo.src}
+              alt={photo.alt}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+              <ZoomIn size={24} className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
+          </button>
+        ))}
+      </div>
+
+      <AnimatePresence>
+        {lightbox && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-[199999] flex items-center justify-center p-4"
+            onClick={() => setLightbox(null)}
+          >
+            <div className="absolute inset-0 bg-black/95 backdrop-blur-sm" />
+            <motion.img
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.25, ease: 'easeOut' }}
+              src={lightbox}
+              alt=""
+              className="relative z-10 max-w-[90vw] max-h-[90vh] object-contain rounded-xl shadow-2xl"
+              onClick={e => e.stopPropagation()}
+            />
+            <button
+              onClick={() => setLightbox(null)}
+              className="absolute top-4 right-4 z-10 p-2 rounded-lg bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700 transition-all duration-200"
+            >
+              <X size={20} />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
 
 export const NetbeesModal = ({ open, onClose }: NetbeesModalProps) => {
   useEffect(() => {
@@ -78,18 +147,8 @@ export const NetbeesModal = ({ open, onClose }: NetbeesModalProps) => {
             </div>
 
             <div className="p-6 space-y-8">
-              {/* Fotos */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                {photos.map((photo, i) => (
-                  <div key={i} className="rounded-xl overflow-hidden border border-slate-800/60 aspect-[4/3] bg-slate-900">
-                    <img
-                      src={photo.src}
-                      alt={photo.alt}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                ))}
-              </div>
+              {/* Fotos Netbees */}
+              <PhotoGrid photos={photosNetbees} cols="grid-cols-2 md:grid-cols-4" />
 
               {/* Descripción */}
               <div className="space-y-5">
@@ -101,6 +160,12 @@ export const NetbeesModal = ({ open, onClose }: NetbeesModalProps) => {
                     <p className="text-slate-300 text-sm leading-relaxed">{text}</p>
                   </div>
                 ))}
+              </div>
+
+              {/* Fotos AWS Summit */}
+              <div>
+                <p className="text-xs font-mono text-orange-400 uppercase tracking-wider mb-3">AWS Summit Madrid 2026</p>
+                <PhotoGrid photos={photosAWS} cols="grid-cols-3" />
               </div>
             </div>
           </motion.div>
