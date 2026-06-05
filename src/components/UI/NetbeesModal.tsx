@@ -136,7 +136,8 @@ export const NetbeesModal = ({ open, onClose }: NetbeesModalProps) => {
             <div className="sticky top-0 z-10 flex items-center justify-between px-6 py-4 bg-[#0a0f18]/95 backdrop-blur border-b border-slate-800/60">
               <div>
                 <p className="text-xs font-mono text-cyan-400 uppercase tracking-wider mb-0.5">2024 — 2026</p>
-                <h2 className="text-lg md:text-xl font-bold text-white">Prácticas en Netbees <span className="text-slate-400 font-normal text-base">(500h)</span></h2>
+                <h2 className="text-lg md:text-xl font-bold text-white">Administración de Sistemas Informáticos en Red <span className="text-slate-400 font-normal text-sm">(ASIR)</span></h2>
+                <p className="text-slate-400 text-sm mt-0.5">Prácticas en Netbees <span className="text-slate-500">(500h)</span></p>
               </div>
               <button
                 onClick={onClose}

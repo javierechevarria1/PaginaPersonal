@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, Award, ChevronRight, Globe } from 'lucide-react';
 import { NetbeesModal } from '../../components/UI/NetbeesModal';
+import { SMRModal } from '../../components/UI/SMRModal';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -18,6 +19,7 @@ const staggerContainer = {
 
 export const Experience = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [smrModalOpen, setSmrModalOpen] = useState(false);
 
   return (
     <section className="relative h-screen w-full flex flex-col justify-center px-6 pt-16 overflow-hidden bg-[#0a0f18]">
@@ -40,7 +42,7 @@ export const Experience = () => {
             <div className="absolute w-4 h-4 bg-[#0a0f18] border-2 border-cyan-500 rounded-full -left-[9px] top-1.5 group-hover:bg-cyan-500 group-hover:shadow-[0_0_15px_#22d3ee] transition-all duration-300"></div>
             <div className="bg-slate-900/40 border border-slate-800/60 rounded-xl p-6 md:p-8 hover:border-cyan-500/30 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
               <span className="text-xs font-mono text-cyan-400 mb-2 block tracking-wider uppercase">2026 — 2028 (En Proceso)</span>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Desarrollo de Aplicaciones Web</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Desarrollo de Aplicaciones Web <span className="text-slate-400 font-normal text-lg">(DAW)</span></h3>
               <p className="text-slate-400 text-sm mb-4 font-medium">Centro de Formación Profesional Decroly</p>
               <p className="text-slate-300 font-light text-base leading-relaxed">Próximo paso formativo para complementar mis habilidades de sistemas con programación y desarrollo de software.</p>
             </div>
@@ -73,7 +75,7 @@ export const Experience = () => {
             <div className="absolute w-4 h-4 bg-[#0a0f18] border-2 border-cyan-500 rounded-full -left-[9px] top-1.5 group-hover:bg-cyan-500 group-hover:shadow-[0_0_15px_#22d3ee] transition-all duration-300"></div>
             <div className="bg-slate-900/40 border border-slate-800/60 rounded-xl p-6 md:p-8 hover:border-cyan-500/30 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
               <span className="text-xs font-mono text-cyan-400 mb-2 block tracking-wider uppercase">2024 — 2026</span>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Administración de Sistemas (ASIR)</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Administración de Sistemas Informáticos en Red <span className="text-slate-400 font-normal text-lg">(ASIR)</span></h3>
               <p className="text-slate-400 text-sm mb-5 font-medium">Centro de Formación Profesional Decroly</p>
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-slate-300 text-sm bg-[#05080f] p-3 rounded-lg border border-slate-800/80">
@@ -103,12 +105,18 @@ export const Experience = () => {
             <div className="absolute w-4 h-4 bg-[#0a0f18] border-2 border-cyan-500 rounded-full -left-[9px] top-1.5 group-hover:bg-cyan-500 group-hover:shadow-[0_0_15px_#22d3ee] transition-all duration-300"></div>
             <div className="bg-slate-900/40 border border-slate-800/60 rounded-xl p-6 md:p-8 hover:border-cyan-500/30 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
               <span className="text-xs font-mono text-cyan-400 mb-2 block tracking-wider uppercase">2022 — 2024</span>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Sistemas Microinformáticos y Redes</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Sistemas Microinformáticos y Redes <span className="text-slate-400 font-normal text-lg">(SMR)</span></h3>
               <p className="text-slate-400 text-sm mb-5 font-medium">IES Valle de Camargo</p>
               <div className="flex items-center gap-3 text-slate-300 text-sm bg-[#05080f] p-3 rounded-lg border border-slate-800/80">
                 <Briefcase size={18} className="text-blue-400" />
                 <span>Prácticas en IES José María Pereda (400h)</span>
               </div>
+              <button
+                onClick={() => setSmrModalOpen(true)}
+                className="mt-4 flex items-center gap-1.5 text-xs font-mono text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group"
+              >
+                Ver más <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform duration-200" />
+              </button>
             </div>
           </motion.div>
 
@@ -116,6 +124,7 @@ export const Experience = () => {
       </motion.div>
 
       <NetbeesModal open={modalOpen} onClose={() => setModalOpen(false)} />
+      <SMRModal open={smrModalOpen} onClose={() => setSmrModalOpen(false)} />
     </section>
   );
 };
