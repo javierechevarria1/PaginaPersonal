@@ -41,19 +41,19 @@ export const About = () => {
               <span className="text-cyan-400">&gt; whoami</span>
             </p>
             <p className="mb-5 text-slate-400 leading-relaxed">
-              "Soy un apasionado de la tecnología, los servidores y el código. Empecé gestionando redes a nivel microinformático y me especialicé en ASIR."
+              Técnico en Sistemas Microinformáticos y Redes (SMR), y Técnico Superior en Administración de Sistemas Informáticos en Red (ASIR). He realizado prácticas profesionales en entornos reales, dando soporte técnico, gestionando redes e infraestructuras y participando en el desarrollo de proyectos software.
             </p>
             <p className="mb-3">
               <span className="text-cyan-400">&gt; cat objetivos.txt</span>
             </p>
             <p className="mb-5 text-slate-400 leading-relaxed">
-              "Mi próximo gran reto es dominar la creación de software. Entre 2026 y 2028 cursaré DAW y me especializaré en Hacking Ético e IA aplicados a la Ciberseguridad e Ingeniería de Software."
+              Mi siguiente paso es ampliar mi perfil hacia el desarrollo de software. Entre 2026 y 2028 cursaré Desarrollo de Aplicaciones Web (DAW) y me especializaré en Hacking Ético e IA aplicados a la Ciberseguridad y la Ingeniería de Software.
             </p>
             <p className="mb-3">
               <span className="text-cyan-400">&gt; echo $FILOSOFIA</span>
             </p>
             <p className="text-green-400/90">
-              "La excelencia no es un acto, es un hábito."
+              Aprendizaje constante, atención al detalle y compromiso con hacer las cosas bien.
             </p>
             <p className="mt-3 animate-pulse text-cyan-400">_</p>
           </div>
