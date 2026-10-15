@@ -53,7 +53,7 @@ export const Experience = () => {
             <div className="absolute w-4 h-4 bg-[#0a0f18] border-2 border-cyan-500 rounded-full -left-[9px] top-1.5 group-hover:bg-cyan-500 group-hover:shadow-[0_0_15px_#22d3ee] transition-all duration-300"></div>
             <div className="bg-slate-900/40 border border-slate-800/60 rounded-xl p-6 md:p-8 hover:border-cyan-500/30 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
               <span className="text-xs font-mono text-cyan-400 mb-2 block tracking-wider uppercase">2026 — 2027 (En Proceso)</span>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Especializacion en Hacking e IA aplicados a la ciberseguridad</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Programa de Formación Universitaria en Hacking e IA aplicados a la Ciberseguridad</h3>
               <p className="text-slate-400 text-sm mb-4 font-medium">UNIR (Universidad Internacional de La Rioja)</p>
               <p className="text-slate-300 font-light text-base leading-relaxed">Formación avanzada orientada a la protección de infraestructuras, prevención de vulnerabilidades y seguridad en sistemas en red.</p>
             </div>
@@ -64,7 +64,7 @@ export const Experience = () => {
             <div className="absolute w-4 h-4 bg-[#0a0f18] border-2 border-cyan-500 rounded-full -left-[9px] top-1.5 group-hover:bg-cyan-500 group-hover:shadow-[0_0_15px_#22d3ee] transition-all duration-300"></div>
             <div className="bg-slate-900/40 border border-slate-800/60 rounded-xl p-6 md:p-8 hover:border-cyan-500/30 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
               <span className="text-xs font-mono text-cyan-400 mb-2 block tracking-wider uppercase">2026 — 2027 (En Proceso)</span>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Especializacion en Ingenieria de Software</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Programa de Formación Universitaria en Ingeniería de Software</h3>
               <p className="text-slate-400 text-sm mb-4 font-medium">UNIR (Universidad Internacional de La Rioja)</p>
               <p className="text-slate-300 font-light text-base leading-relaxed">Formación orientada al diseño y desarrollo de software de calidad, abarcando arquitecturas modernas, patrones de diseño, metodologías ágiles y ciclos de vida del desarrollo.</p>
             </div>

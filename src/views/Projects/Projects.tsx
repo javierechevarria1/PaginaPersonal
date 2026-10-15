@@ -46,7 +46,9 @@ const projects = [
         <span className="text-cyan-400">pulsera inteligente</span> y una plataforma digital orientada
         a personas mayores de 65 años con soledad no deseada. Desarrollado durante la hackathon
         organizada por <span className="text-cyan-400">Netbees</span>, resultó{' '}
-        <span className="text-yellow-400">ganador del primer puesto</span>.
+        <span className="text-yellow-400">ganador del primer puesto</span>. También fue mi{' '}
+        Trabajo de Fin de Grado (TFG), que obtuvo una calificación de{' '}
+        <span className="text-yellow-400">9</span>.
       </>
     ),
     features: [

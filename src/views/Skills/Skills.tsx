@@ -43,54 +43,55 @@ export const Skills = () => {
         <div className="max-h-[70vh] overflow-y-auto pr-2 allow-scroll custom-scrollbar">
           <div className="grid md:grid-cols-2 gap-5 md:gap-8">
             <motion.div variants={fadeInUp}>
-              <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-3 pb-3 border-b border-slate-800/80">
-                <Server className="text-cyan-400" size={20}/> SMR & ASIR
+              <h3 className="text-lg font-bold text-white mb-4 flex min-h-14 items-center gap-3 pb-3 border-b border-slate-800/80">
+                <Server className="shrink-0 text-cyan-400" size={20}/> Sistemas y Redes
               </h3>
               <div className="flex flex-col gap-3">
                 <SkillTag name="Administración Windows/Linux" icon={Terminal} />
                 <SkillTag name="Redes TCP/IP & Routing" icon={Network} />
                 <SkillTag name="Virtualización & Entornos" icon={Server} />
                 <SkillTag name="Seguridad en Sistemas" icon={Shield} />
+                <SkillTag name="Wireshark" icon={Network} />
+                <SkillTag name="Bases de Datos & SQL" icon={Database} />
                 <SkillTag name="Scripting & Automatización" icon={Terminal} />
                 <SkillTag name="Hardware & Mantenimiento" icon={Cpu} />
               </div>
             </motion.div>
             
             <motion.div variants={fadeInUp}>
-              <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-3 pb-3 border-b border-slate-800/80">
-                <Code className="text-blue-400" size={20}/> Desarrollo de Aplicaciones Web (DAW)
+              <h3 className="text-lg font-bold text-white mb-4 flex min-h-14 items-center gap-3 pb-3 border-b border-slate-800/80">
+                <Code className="shrink-0 text-blue-400" size={20}/> Desarrollo Web
               </h3>
               <div className="flex flex-col gap-3">
                 <SkillTag name="HTML5 + CSS3 + Tailwind" icon={Code} />
                 <SkillTag name="React.js + Next.js + Vite" icon={Code} />
                 <SkillTag name="Node.js & TypeScript" icon={Code} />
                 <SkillTag name="Python & Java" icon={Terminal} />
-                <SkillTag name="Bases de Datos & SQL" icon={Database} />
-                <SkillTag name="VS Code & IntelliJ IDEA" icon={Terminal} />
+                <SkillTag name="VS Code, IntelliJ IDEA & Trae" icon={Terminal} />
                 <SkillTag name="DBeaver" icon={Database} />
+                <SkillTag name="Git & Control de Versiones" icon={GitBranch} />
+                <SkillTag name="Sourcetree" icon={GitBranch} />
               </div>
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <h3 className="text-lg font-bold text-white mb-4 flex flex-wrap items-center gap-3 pb-3 border-b border-slate-800/80">
-                <Shield className="text-rose-400" size={20}/> Hacking e IA aplicados a la ciberseguridad
+              <h3 className="text-lg font-bold text-white mb-4 flex min-h-14 items-center gap-3 pb-3 border-b border-slate-800/80">
+                <Shield className="shrink-0 text-rose-400" size={20}/> Hacking e IA aplicados a la ciberseguridad
               </h3>
               <div className="flex flex-col gap-3">
                 <SkillTag name="Google Colab & Jupyter Notebooks" icon={Cpu} />
                 <SkillTag name="Metasploit, Nmap & FOCA" icon={Shield} />
-                <SkillTag name="Wireshark & Burp Suite" icon={Network} />
+                <SkillTag name="Burp Suite" icon={Network} />
                 <SkillTag name="Splunk & Elastic (SIEM)" icon={Database} />
               </div>
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <h3 className="text-lg font-bold text-white mb-4 flex flex-wrap items-center gap-3 pb-3 border-b border-slate-800/80">
-                <GitBranch className="text-purple-400" size={20}/> Ingeniería de Software
+              <h3 className="text-lg font-bold text-white mb-4 flex min-h-14 items-center gap-3 pb-3 border-b border-slate-800/80">
+                <GitBranch className="shrink-0 text-purple-400" size={20}/> Ingeniería de Software
               </h3>
               <div className="flex flex-col gap-3">
-                <SkillTag name="Git & Control de Versiones" icon={GitBranch} />
                 <SkillTag name="GitHub & GitLab" icon={GitBranch} />
-                <SkillTag name="Sourcetree" icon={GitBranch} />
                 <SkillTag name="Docker" icon={Package} />
                 <SkillTag name="AWS & Azure" icon={Server} />
                 <SkillTag name="Jira & Trello" icon={Code} />
