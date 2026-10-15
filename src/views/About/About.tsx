@@ -47,7 +47,7 @@ export const About = () => {
               <span className="text-cyan-400">&gt; cat objetivos.txt</span>
             </p>
             <p className="mb-5 text-slate-400 leading-relaxed">
-              Mi siguiente paso es ampliar mi perfil hacia el desarrollo de software. Entre 2026 y 2028 cursaré Desarrollo de Aplicaciones Web (DAW) y me especializaré en Hacking Ético e IA aplicados a la Ciberseguridad y la Ingeniería de Software.
+              Actualmente estoy cursando Desarrollo de Aplicaciones Web (DAW) y ampliando mi perfil con formación en Hacking e IA aplicados a la Ciberseguridad e Ingeniería de Software.
             </p>
             <p className="mb-3">
               <span className="text-cyan-400">&gt; echo $FILOSOFIA</span>

@@ -35,15 +35,15 @@ export const Home = ({ onNavigateToProjects }: { onNavigateToProjects: () => voi
           <motion.div variants={fadeInUp} className="mb-6 flex items-center gap-4 font-mono text-cyan-400 text-sm">
             <span>&gt; Hello, World. I am</span>
           </motion.div>
-          <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.1] mb-6 text-white">
+          <motion.h1 variants={fadeInUp} className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] mb-6 text-white">
             Javier Echevarria
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-              SysAdmin & Developer
+              Systems Administrator | Full-Stack Developer | Software Engineering | Cybersecurity & DevSecOps
             </span>
           </motion.h1>
           <motion.h2 variants={fadeInUp} className="text-lg md:text-xl font-light text-slate-400 max-w-2xl mb-10 leading-relaxed">
-            Especializado en <strong className="text-cyan-400 font-normal">Sistemas Informáticos en Red</strong>. Construyendo el puente hacia el desarrollo de software y aplicaciones web.
+            Perfil orientado a <strong className="text-cyan-400 font-normal">sistemas, desarrollo web, ciberseguridad y DevSecOps</strong>.
           </motion.h2>
           <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
             <button onClick={onNavigateToProjects} className="px-6 py-3 bg-cyan-500/10 text-cyan-400 border border-cyan-500/50 font-mono text-sm hover:bg-cyan-500 hover:text-slate-900 transition-all shadow-[0_0_15px_rgba(34,211,238,0.15)] hover:shadow-[0_0_25px_rgba(34,211,238,0.4)] flex items-center gap-2 cursor-pointer">

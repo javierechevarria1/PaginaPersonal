@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Server, Code, Network, Terminal, Database, Shield, GitBranch, Cpu } from 'lucide-react';
+import { Server, Code, Network, Terminal, Database, Shield, GitBranch, Cpu, Package } from 'lucide-react';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -40,11 +40,11 @@ export const Skills = () => {
           <div className="h-[1px] flex-1 bg-slate-800"></div>
         </motion.div>
 
-        <div>
+        <div className="max-h-[70vh] overflow-y-auto pr-2 allow-scroll custom-scrollbar">
           <div className="grid md:grid-cols-2 gap-5 md:gap-8">
             <motion.div variants={fadeInUp}>
               <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-3 pb-3 border-b border-slate-800/80">
-                <Server className="text-cyan-400" size={20}/> Infraestructura & Redes
+                <Server className="text-cyan-400" size={20}/> SMR & ASIR
               </h3>
               <div className="flex flex-col gap-3">
                 <SkillTag name="Administración Windows/Linux" icon={Terminal} />
@@ -58,7 +58,7 @@ export const Skills = () => {
             
             <motion.div variants={fadeInUp}>
               <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-3 pb-3 border-b border-slate-800/80">
-                <Code className="text-blue-400" size={20}/> Desarrollo & Software
+                <Code className="text-blue-400" size={20}/> Desarrollo de Aplicaciones Web (DAW)
               </h3>
               <div className="flex flex-col gap-3">
                 <SkillTag name="HTML5 + CSS3 + Tailwind" icon={Code} />
@@ -66,22 +66,37 @@ export const Skills = () => {
                 <SkillTag name="Node.js & TypeScript" icon={Code} />
                 <SkillTag name="Python & Java" icon={Terminal} />
                 <SkillTag name="Bases de Datos & SQL" icon={Database} />
+                <SkillTag name="VS Code & IntelliJ IDEA" icon={Terminal} />
+                <SkillTag name="DBeaver" icon={Database} />
+              </div>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <h3 className="text-lg font-bold text-white mb-4 flex flex-wrap items-center gap-3 pb-3 border-b border-slate-800/80">
+                <Shield className="text-rose-400" size={20}/> Hacking e IA aplicados a la ciberseguridad
+              </h3>
+              <div className="flex flex-col gap-3">
+                <SkillTag name="Google Colab & Jupyter Notebooks" icon={Cpu} />
+                <SkillTag name="Metasploit, Nmap & FOCA" icon={Shield} />
+                <SkillTag name="Wireshark & Burp Suite" icon={Network} />
+                <SkillTag name="Splunk & Elastic (SIEM)" icon={Database} />
+              </div>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <h3 className="text-lg font-bold text-white mb-4 flex flex-wrap items-center gap-3 pb-3 border-b border-slate-800/80">
+                <GitBranch className="text-purple-400" size={20}/> Ingeniería de Software
+              </h3>
+              <div className="flex flex-col gap-3">
                 <SkillTag name="Git & Control de Versiones" icon={GitBranch} />
+                <SkillTag name="GitHub & GitLab" icon={GitBranch} />
+                <SkillTag name="Sourcetree" icon={GitBranch} />
+                <SkillTag name="Docker" icon={Package} />
+                <SkillTag name="AWS & Azure" icon={Server} />
+                <SkillTag name="Jira & Trello" icon={Code} />
               </div>
             </motion.div>
           </div>
-
-          {/* Tag Cloud */}
-          <motion.div variants={fadeInUp} className="mt-5 pt-4 border-t border-slate-800/50">
-            <p className="font-mono text-sm text-slate-500 mb-4 uppercase tracking-wider">&gt; Otras herramientas:</p>
-            <div className="flex flex-wrap gap-3">
-              {["Git", "GitHub", "Bash/Shell", "VS Code", "Hardware"].map((skill, idx) => (
-                <span key={idx} className="px-4 py-2 bg-[#05080f] border border-slate-800/80 rounded-lg text-slate-300 font-mono text-xs hover:border-cyan-500/50 hover:text-cyan-400 transition-all duration-300 cursor-default hover:shadow-[0_0_15px_rgba(34,211,238,0.1)]">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </motion.div>
     </section>
