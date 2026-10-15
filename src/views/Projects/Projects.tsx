@@ -33,7 +33,7 @@ const projects = [
       { icon: ShieldCheck,   color: 'text-green-400',  label: 'Autenticación propia' },
     ],
     stack: ['React', 'Next.js', 'Node.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Socket.io', 'Stripe'],
-    link: null,
+    link: 'https://vive-plus.vercel.app/',
   },
   {
     id: 'nexa',
